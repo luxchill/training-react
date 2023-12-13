@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: aliceblue;
 }
 
 code {
@@ -12,14 +13,36 @@ code {
     monospace;
 }
 
-.App {
-  color: red;
-  font-weight: 600;
+.booklist {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 5rem auto;
+  display: grid;
+  gap: 2rem;
 }
 
-.App-link {
-  padding: 10px 15px 10px 15px;
-  border-radius: 3rem;
-  background-color: aquamarine;
-  text-decoration: none;
+@media screen and (min-width: 768px) {
+  .booklist {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.book {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.book img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.book h1 {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+.book h5 {
+  font-size: 0.8rem;
 }
